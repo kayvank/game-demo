@@ -1,0 +1,222 @@
+cabal-version: 2.2
+
+-- This file has been generated from package.yaml by hpack version 0.34.4.
+--
+-- see: https://github.com/sol/hpack
+
+name:           game-demo
+version:        0.0.1.0
+synopsis:       game demo
+description:    See README at <https://github.com/kayvank/game-demo
+category:       Package.Category
+homepage:       https://github.com/kayvank/game-demo#readme
+bug-reports:    https://github.com/kayvank/game-demo/issues
+author:         Your Name
+maintainer:     Your Name
+license:        BSD-3-Clause
+build-type:     Simple
+
+source-repository head
+  type: git
+  location: https://github.com/kayvank/game-demo
+
+library
+  exposed-modules:
+      Core.Engine
+      Core.EngineConfig
+      Core.EngineState
+      Core.Event
+      Core.Geometry
+      Core.Midi
+      Core.Random
+      Core.Texture
+      Core.Utils
+      GameDemo
+  other-modules:
+      Paths_game_demo
+  hs-source-dirs:
+      src
+  default-extensions:
+      DeriveAnyClass
+      DeriveDataTypeable
+      DeriveFunctor
+      DeriveGeneric
+      DerivingStrategies
+      FlexibleContexts
+      FlexibleInstances
+      GeneralizedNewtypeDeriving
+      LambdaCase
+      MultiParamTypeClasses
+      MultiWayIf
+      NamedFieldPuns
+      NoImplicitPrelude
+      OverloadedStrings
+      RecordWildCards
+      ScopedTypeVariables
+      StandaloneDeriving
+      TupleSections
+      TypeApplications
+      TypeOperators
+      ViewPatterns
+  ghc-options: -Wall
+  build-depends:
+      Euterpea
+    , GLFW-b
+    , JuicyPixels
+    , OpenGL
+    , aeson
+    , base
+    , bmp
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , file-embed
+    , filepath
+    , integer-gmp
+    , monad-extras
+    , monad-loops
+    , mtl
+    , ormolu
+    , pathfinding
+    , protolude
+    , random
+    , safe
+    , sdl2-mixer
+    , tar
+    , text
+    , time
+    , universum
+    , unix
+    , unordered-containers
+    , vector
+  default-language: Haskell2010
+
+executable spaceminer
+  main-is: Main.hs
+  other-modules:
+      Paths_game_demo
+  hs-source-dirs:
+      spaceminer
+  default-extensions:
+      DeriveAnyClass
+      DeriveDataTypeable
+      DeriveFunctor
+      DeriveGeneric
+      DerivingStrategies
+      FlexibleContexts
+      FlexibleInstances
+      GeneralizedNewtypeDeriving
+      LambdaCase
+      MultiParamTypeClasses
+      MultiWayIf
+      NamedFieldPuns
+      NoImplicitPrelude
+      OverloadedStrings
+      RecordWildCards
+      ScopedTypeVariables
+      StandaloneDeriving
+      TupleSections
+      TypeApplications
+      TypeOperators
+      ViewPatterns
+  ghc-options: -Wall -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      Euterpea
+    , GLFW-b
+    , JuicyPixels
+    , OpenGL
+    , aeson
+    , base
+    , bmp
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , file-embed
+    , filepath
+    , game-demo
+    , integer-gmp
+    , monad-extras
+    , monad-loops
+    , mtl
+    , ormolu
+    , pathfinding
+    , protolude
+    , random
+    , safe
+    , sdl2-mixer
+    , tar
+    , text
+    , time
+    , universum
+    , unix
+    , unordered-containers
+    , vector
+  default-language: Haskell2010
+
+test-suite game-demo-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Main
+      Paths_game_demo
+  hs-source-dirs:
+      test
+  default-extensions:
+      DeriveAnyClass
+      DeriveDataTypeable
+      DeriveFunctor
+      DeriveGeneric
+      DerivingStrategies
+      FlexibleContexts
+      FlexibleInstances
+      GeneralizedNewtypeDeriving
+      LambdaCase
+      MultiParamTypeClasses
+      MultiWayIf
+      NamedFieldPuns
+      NoImplicitPrelude
+      OverloadedStrings
+      RecordWildCards
+      ScopedTypeVariables
+      StandaloneDeriving
+      TupleSections
+      TypeApplications
+      TypeOperators
+      ViewPatterns
+  ghc-options: -Wall
+  build-depends:
+      Euterpea
+    , GLFW-b
+    , JuicyPixels
+    , OpenGL
+    , aeson
+    , base
+    , bmp
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , file-embed
+    , filepath
+    , game-demo
+    , hedgehog
+    , integer-gmp
+    , monad-extras
+    , monad-loops
+    , mtl
+    , ormolu
+    , pathfinding
+    , protolude
+    , random
+    , safe
+    , sdl2-mixer
+    , tar
+    , text
+    , time
+    , universum
+    , unix
+    , unordered-containers
+    , vector
+  default-language: Haskell2010
